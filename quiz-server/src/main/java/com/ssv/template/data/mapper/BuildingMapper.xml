@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssv.template.data.mapper.BuildingMapper">
+	<insert id="insertBuilding" parameterType="Building" >
+        INSERT INTO Building (NAME) VALUES (#{name});
+    </insert>
+ 
+    <update id="updateBuilding" parameterType="Building">
+        UPDATE Building SET NAME = #{name} WHERE ID = #{id};
+    </update>
+     
+    <delete id="deleteBuildingById" parameterType="int">
+        DELETE from Building WHERE ID = #{id};
+    </delete>
+     
+    <resultMap id = "result" type = "Building">
+       <result property = "id" column = "ID"/>
+       <result property = "name" column = "NAME"/>
+    </resultMap>
+	
+</mapper>

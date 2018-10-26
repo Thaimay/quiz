@@ -1,0 +1,85 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/web/layout.html}">
+<head>
+<title>Building</title>
+<meta name="keywords" content="content1" />
+<meta name="description" content="content1" />
+</head>
+<body>
+	<div layout:fragment="content">
+		<!-- header content section -->
+		<section id="works-info" class="section ">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7 col-sm-6 hero">
+						<div class="hero-content">
+							<h4>The List of building</h4>
+						</div>
+						<!-- hero -->
+					</div>
+					<div class="col-md-5 col-sm-6 hero text-center">
+						<div class="hero-content">
+							<a th:href="@{/web/home/index}" class="btn">Back to home <i
+								class="fa fa-long-arrow-left"></i>
+							</a>
+						</div>
+						<!-- hero -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- header content section -->
+		<!-- portfolio grid section -->
+		<section id="building-list">
+			<div class="container">
+				<hr>
+				<div class="row">
+					<div class="col-md-12 building-list ">
+						<div class="building-list masonry">
+							<div class="col-sm-6 portfolio-item masonry-item grid"
+								th:each="building : ${buildingList}">
+								<a href="work-details.html" class="portfolio-link">
+									<div class="caption">
+										<div class="caption-content">
+											<h2>
+												<span th:text="${building.name}"></span> <span
+													th:if="${!building.name.isEmpty()}"
+													th:text="${'(' + building.nameJp + ')'}"></span>
+											</h2>
+											<p>
+												Height: <span th:text="${building.heightM + 'm'}"></span>
+											</p>
+											<p>
+												Floors: <span th:text="${building.floors}"></span>
+											</p>
+											<p>
+												City: <span th:text="${building.city}"></span>
+											</p>
+										</div>
+									</div> <img th:src="${building.image}" class="img-responsive" alt="">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- portfolio grid section -->
+		<!-- service section -->
+		<section id="backto" class="work-detail section">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 text-center section">
+						<a href="index.html"><i class="fa fa-th fa-2x"></i></a>
+						<p>Back to projects</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- service section -->
+	</div>
+</body>
+</html>

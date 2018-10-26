@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	layout:decorate="~{/web/layout.html}">
+<head>
+<title>Home</title>
+<meta name="keywords" content="content1" />
+<meta name="description" content="content1" />
+</head>
+<body>
+	<div layout:fragment="content">
+		<!-- header content section -->
+		<section id="hero" class="section ">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 hero">
+						<div class="hero-content">
+							<h1>Saishunkan System.</h1>
+						</div>
+						<!-- hero -->
+					</div>
+					<div class="col-md-6 col-sm-6 hero">
+						<div class="hero-content">
+							<a th:href="@{/web/prefucture/index}">
+								<div class="col-md-3 col-sm-6 service text-center">
+									<span class="icon icon-trophy"></span>
+									<div class="service-content">
+										<h5>Prefecture</h5>
+									</div>
+								</div>
+							</a> <a th:href="@{/web/city/index}">
+								<div class="col-md-3 col-sm-6 service text-center">
+									<span class="icon icon-megaphone"></span>
+									<div class="service-content">
+										<h5>City</h5>
+									</div>
+								</div>
+							</a> <a th:href="@{/web/building/index}">
+								<div class="col-md-3 col-sm-6 service text-center">
+									<span class="icon icon-trophy"></span>
+									<div class="service-content">
+										<h5>Building</h5>
+									</div>
+								</div>
+							</a> <a th:href="@{/web/company/index}">
+								<div class="col-md-3 col-sm-6 service text-center">
+									<span class="icon icon-megaphone"></span>
+									<div class="service-content">
+										<h5>Company</h5>
+									</div>
+								</div>
+							</a>
+						</div>
+						<!-- hero -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- header content section -->
+		<!-- portfolio grid section -->
+		<section id="portfolio">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12 text-center">
+						<hr class="section">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 portfolio-item">
+						<a href="work-details.html" class="portfolio-link">
+							<div class="caption">
+								<div class="caption-content">
+									<h3>List of Prefecture</h3>
+								</div>
+							</div> <img th:src="@{/images/portfolio/work-1.jpg}"
+							class="img-responsive" alt="">
+						</a>
+					</div>
+					<div class="col-sm-6 portfolio-item">
+						<a href="work-details.html" class="portfolio-link">
+							<div class="caption">
+								<div class="caption-content">
+									<h3>List of City</h3>
+								</div>
+							</div> <img th:src="@{/images/portfolio/work-2.jpg}"
+							class="img-responsive" alt="">
+						</a>
+					</div>
+					<div class="col-sm-6 portfolio-item">
+						<a href="work-details.html" class="portfolio-link">
+							<div class="caption">
+								<div class="caption-content">
+									<h3>List of Building</h3>
+								</div>
+							</div> <img th:src="@{/images/portfolio/work-3.jpg}"
+							class="img-responsive" alt="">
+						</a>
+					</div>
+					<div class="col-sm-6 portfolio-item">
+						<a href="work-details.html" class="portfolio-link">
+							<div class="caption">
+								<div class="caption-content">
+									<h3>List of Company</h3>
+								</div>
+							</div> <img th:src="@{/images/portfolio/work-4.jpg}"
+							class="img-responsive" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- portfolio grid section -->
+	</div>
+</body>
+</html>
