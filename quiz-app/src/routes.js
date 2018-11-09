@@ -1,50 +1,44 @@
-import HomePage from "./pages/home.vue";
-import AboutPage from "./pages/about.vue";
-import FormPage from "./pages/form.vue";
-import LoginPage from "./pages/login.vue";
-import DynamicRoutePage from "./pages/dynamic-route.vue";
-import NotFoundPage from "./pages/not-found.vue";
+import Home from './assets/vue/pages/home.vue';
+import AboutPage from './assets/vue/pages/about.vue';
+import FormPage from './assets/vue/pages/form.vue';
+import DynamicRoutePage from './assets/vue/pages/dynamic-route.vue';
 
-import PanelLeftPage from "./pages/panel-left.vue";
-import PanelRightPage from "./pages/panel-right.vue";
-
-import FrameManage from "./pages/frame-manage.vue";
+import PanelLeftPage from './assets/vue/pages/panel-left.vue';
+import ColorThemes from './assets/vue/pages/color-themes.vue';
+import Chat from './assets/vue/pages/chat.vue';
+import Vuex from './assets/vue/pages/vuex.vue';
 
 export default [
   {
-    path: "/",
-    component: HomePage
+    path: '/',
+    component: Home
   },
   {
-    path: "/panel-left/",
-    component: PanelLeftPage
-  },
-  {
-    path: "/panel-right/",
-    component: PanelRightPage
-  },
-  {
-    path: "/about/",
+    path: '/about/',
     component: AboutPage
   },
   {
-    path: "/form/",
+    path: '/form/',
     component: FormPage
   },
   {
-    path: "/login/",
-    component: LoginPage
-  },
-  {
-    path: "/dynamic-route/blog/:blogId/post/:postId/",
+    path: '/dynamic-route/blog/:blogId/post/:postId/',
     component: DynamicRoutePage
   },
   {
-    path: "/frame-manage/",
-    component: FrameManage
+    path: '/panel-left/',
+    component: PanelLeftPage
   },
   {
-    path: "(.*)",
-    component: NotFoundPage
-  }
-];
+    path: '/color-themes/',
+    component: ColorThemes
+  },
+  {
+    path: '/chat/',
+    component: Chat
+  },
+  {
+    path: '/vuex/',
+    component: Vuex
+  },
+]
